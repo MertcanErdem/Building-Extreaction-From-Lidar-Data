@@ -6,14 +6,9 @@ This repository contains Python scripts to generate a building map from LiDAR da
 ## Table of Contents
 * [Introduction](#introduction)
 * [Requirements](#requirements)
-* [Understanding The Project](#understanding-the-project)
 * [Setup](#setup)
 * [Usage](#usage)
-* [Possible Uses for the Project](#possible-uses-for-the-project)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
+* [Understanding The Project](#understanding-the-project)
 
 ## Introduction:
 
@@ -88,3 +83,37 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 14. 
 15. 
 16. 
+
+
+## Understanding The Project
+We use  is using the laspy library to read in a LAS file which contains point cloud data. It then sets the CRS information to projection and writes the updated LAS file.
+
+Next, we mannualy define the CRS (coordinate reference system) for the output raster and the code extracts the x, y, and z coordinates from the LAS file. It then sets the resolution of the digital elevation model (DEM) and calculates the grid bounds based on the x and y coordinates.
+
+It generates a grid of points for the DEM and creates the DEM using linear interpolation of the point cloud. Finally, it saves the DEM to a GeoTIFF file using rasterio.
+
+Afterwards we generate a digital terrain model (DTM) from a LiDAR point cloud dataset.
+
+Here is a summary of what the code does:
+
+- It uses the laspy package to read a LAS file (LiDAR point cloud data).
+- It classifies the points in the point cloud as either ground or non ground points.
+- It determines the bounds of the point cloud and calculates the size of the output raster based on the resolution specified.
+- It creates an empty numpy array for the output DTM, and counts for each cell in the array.
+- It creates a KDTree from the x, y coordinates of the ground points, and interpolates the z values of the ground points onto a mesh grid using linear interpolation.
+- It loads the digital surface model (DSM) from the same LAS file and interpolates the non-ground (aboveground) points onto the mesh grid using linear interpolation.
+- It subtracts the interpolated non-ground values from the interpolated ground values to generate the DTM.
+
+Finally, it writes the output DTM to a GeoTIFF file using the rasterio package and the resulting output file dtm.tif will contain elevation values for the ground surface at each point in the raster grid.
+
+After generating the DTM we generate a nDHM by subtracting the DTM from the DSM.
+
+In our filtering phase the code uses the Python libraries rasterio and cv2 (OpenCV) to process a raster image file of an nDHM (Normalized Digital Height Model) and extract a binary mask of the buildings in the image.
+
+First, the code opens the nDHM image using rasterio and reads the raster data into a NumPy array. It also creates a copy of the metadata (profile) of the input file, which will be used later when writing the output file.
+
+Next, the code performs image processing operations using cv2 to separate the buildings from the rest of the image. It first normalizes the NDHM image to 8-bit values using cv2.normalize(), and then applies adaptive thresholding using cv2.adaptiveThreshold() to produce a binary image with the buildings as white pixels and the background as black pixels.
+
+The code then uses cv2.findContours() to find the contours (outlines) of the buildings in the binary image. It filters out contours with low "squareness" (aspect ratio) or small size, which are likely to correspond to vegetation or noise, using a minimum squareness threshold of 0.9 and a minimum size threshold that is computed based on the pixel size of a square meter in the image.
+
+Finally, the code creates a binary mask image of the buildings using cv2.drawContours() and writes the output file as a GeoTIFF using rasterio.open() and dst.write(), with the metadata of the output file updated to reflect a binary output.
