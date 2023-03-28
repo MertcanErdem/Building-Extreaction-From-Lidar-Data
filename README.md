@@ -55,9 +55,12 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 6. Install pyrpoj
     ```bash
    pip install pyproj
-
-7.  Install QGIS by following the instructions [here](https://www.qgis.org/en/site/forusers/download.html).
-   
+   ```
+7. Install Scipy 
+   ```bash
+   pip install scipy
+   ```
+8.  Install QGIS by following the instructions [here](https://www.qgis.org/en/site/forusers/download.html).
   
 ## Usage
 1. Clone the repository and download test LiDAR data from [here](https://sigspatial2022.sigspatial.org/giscup/download.html) or use your own aerial LiDAR data.
