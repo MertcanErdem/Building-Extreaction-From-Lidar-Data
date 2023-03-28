@@ -76,12 +76,26 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 7. Run the below 3 cells without changing anything
 8. Open up your QGIS and the folder where the BuildingEXT.ipynb is located.
 9. Drag and Drop <Your las file>, if you have it you <Confiramtion Geojson>,"dsm.tif", "dtm.tif", "ndhm.tif", "buildings.tif" to QGIS and press zoom to layer in one of them
-10. 
-11. 
-12. 
-13. 
-14. 
-15. 
+10. Use QGIS vectorizer to vectorize our buildings
+![1](https://user-images.githubusercontent.com/92017528/228175495-6a880729-346d-4fc3-9cba-727233bc1032.png)
+
+
+11. Select the vectorized layer and select properties tab after that go the the Symbology tab and  change the layer to catogirized
+![2](https://user-images.githubusercontent.com/92017528/228175908-c298e6c8-fcbd-41e6-95bb-b7922a242901.png)
+
+12. Select DN for value and apply the Classification for our building features by pressing Classify
+![3](https://user-images.githubusercontent.com/92017528/228176306-6cc4fa0f-ad9f-461c-a328-659b484ca2ae.png)
+
+
+13. After that we get 3 tabs on our vectorized layer so select the 255 one who has our buildings on it and right click and use the select features tab
+![4](https://user-images.githubusercontent.com/92017528/228176631-1189df46-aa70-4c13-8521-ea40f4034072.png)
+
+14. After selecting the featurs right click on the vector layer and cllick on the Export>Save Selected Features tabs
+![5](https://user-images.githubusercontent.com/92017528/228176960-e4d7a83e-73d8-4a3c-ba51-5b36255677bf.png)
+
+15. Fill out the neccesary tabs as seen on the bellow ficture and remove the check from id field.
+![6](https://user-images.githubusercontent.com/92017528/228177163-76f47c0a-3eac-46c2-aeae-6846bb2661c1.png)
+
 16. 
 
 
