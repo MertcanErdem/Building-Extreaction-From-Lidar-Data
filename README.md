@@ -99,8 +99,15 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 15. Fill out the neccesary tabs as seen on the bellow ficture and remove the check from id field.
 ![6](https://user-images.githubusercontent.com/92017528/228177163-76f47c0a-3eac-46c2-aeae-6846bb2661c1.png)
 
-16. 
+16.Now you got a layer with only the buildings we can compare it to our base layer by using overlap analysis in QGIS 
+   ![image](https://user-images.githubusercontent.com/92017528/228202010-3d8f69eb-8650-49c0-a63d-a5959d0add54.png)
 
+17.Enter your ground truth layer to the input Layer section and your building vector layer to Overlay layers section and press run
+   ![image](https://user-images.githubusercontent.com/92017528/228202320-e4993cd9-4bda-4e91-b0f1-2a8d8aa00ac2.png)
+
+18.By looking at the attrubite table of the newly created overlap layer we can see the overlapped area in the left and percentage of the polygons in the right
+   
+   ![image](https://user-images.githubusercontent.com/92017528/228202572-d123cfcb-04ce-4fb4-ba0a-2963317be689.png)
 
 ## Understanding The Project
 We use  is using the laspy library to read in a LAS file which contains point cloud data. It then sets the CRS information to projection and writes the updated LAS file.
