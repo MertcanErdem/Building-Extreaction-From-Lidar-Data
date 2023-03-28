@@ -1,4 +1,4 @@
-# Building-Extreaction-From-Lidar-Data
+# Building Extreaction From Lidar Data
 
 This repository contains Python scripts to generate a building map from LiDAR data using the Normalized Digital Surface Model (NDHM) approach. The process involves generating Digital Surface Model (DSM) and Digital Terrain Model (DTM) from LiDAR data, computing the NDHM, and then applying different image processing algorithms to detect buildings from the NDHM.
 
@@ -170,5 +170,5 @@ Finally, the code creates a binary mask image of the buildings using cv2.drawCon
 ## Contact
 | Team Members | Account | Link | 
 | ------ | ------ | ------ | 
-| Ümmü Sude YILDIRIM|LinkedIn |https://www.linkedin.com/in/sude-yildirim-6923591a3/ |
-| Mertcan ERDEM | Mail | merterdemcan@hotmail.com|
+| Ümmü Sude YILDIRIM| LinkedIn |https://www.linkedin.com/in/sude-yildirim-6923591a3/ |
+| Mertcan ERDEM | LinkedIn | https://www.linkedin.com/in/mertcan-erdem-54a500209/|
