@@ -126,7 +126,7 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 
 18.By looking at the attrubite table of the newly created overlap layer we can see the overlapped area in the left and percentage of the polygons in the right.
    
-   ![image](https://user-images.githubusercontent.com/92017528/228202572-d123cfcb-04ce-4fb4-ba0a-2963317be689.png)
+![image](https://user-images.githubusercontent.com/92017528/229314149-badc6a08-2c40-4475-bc83-4858077953c5.png)
 
 ## Understanding The Project
 We use  is using the laspy library to read in a LAS file which contains point cloud data. It then sets the CRS information to projection and writes the updated LAS file.
