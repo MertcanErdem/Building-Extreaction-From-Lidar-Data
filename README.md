@@ -128,6 +128,10 @@ Note that this notebook assumes you have basic familiarity with Python and the J
    
 ![image](https://user-images.githubusercontent.com/92017528/229314149-badc6a08-2c40-4475-bc83-4858077953c5.png)
 
+19. The algorithm's strictness can be adjusted by changing the values of several parameters, including the adaptive thresholding parameters, minimum and maximum building sizes, squareness threshold, and morphological parameters.
+
+![image](https://user-images.githubusercontent.com/92017528/229316369-6858fe6d-9c27-4714-bf37-88b150469eb2.png)
+
 ## Understanding The Project
 We use  is using the laspy library to read in a LAS file which contains point cloud data. It then sets the CRS information to projection and writes the updated LAS file.
 
