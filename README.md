@@ -136,7 +136,8 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 
 **18**. By looking at the attrubite table of the newly created overlap layer we can see the overlapped area in the left and percentage of the polygons in the right.
    
-![image](https://user-images.githubusercontent.com/92017528/229747611-ecb93a2f-a197-4c34-8ef3-04db4314bd4b.png)
+![image](https://user-images.githubusercontent.com/92017528/229759903-593c7cc4-1422-482a-a673-a33102fb3a50.png)
+
 
 **19**. The algorithm's strictness can be adjusted by changing the values of several parameters in the code by , including the adaptive thresholding parameters, minimum and maximum building sizes, squareness threshold, and morphological parameters.
 
