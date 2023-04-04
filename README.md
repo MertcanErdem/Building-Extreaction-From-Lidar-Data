@@ -136,11 +136,11 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 
 **18**. By looking at the attrubite table of the newly created overlap layer we can see the overlapped area in the left and percentage of the polygons in the right.
    
-![image](https://user-images.githubusercontent.com/92017528/229314149-badc6a08-2c40-4475-bc83-4858077953c5.png)
+![image](https://user-images.githubusercontent.com/92017528/229747611-ecb93a2f-a197-4c34-8ef3-04db4314bd4b.png)
 
 **19**. The algorithm's strictness can be adjusted by changing the values of several parameters in the code by , including the adaptive thresholding parameters, minimum and maximum building sizes, squareness threshold, and morphological parameters.
 
-![image](https://user-images.githubusercontent.com/92017528/229747412-bd18cb79-33de-4f99-968b-5ef558c72c70.png)
+![image](https://user-images.githubusercontent.com/92017528/229747747-0499de02-b1b5-455a-be45-fe36a8a4f424.png)
 
 Regarding the adaptive thresholding parameters, the block size determines the size of the neighborhood area used for thresholding, while the constant value subtracted from the mean or weighted sum of the neighborhood pixels. The current code uses a block size of 51 and a constant value of 4.6. Altering these values can influence the threshold's strictness, where a smaller block size can enhance the detail but may introduce more noise, while a larger block size can lead to a smoother image but may compromise some detail. Likewise, a higher constant value can result in a stricter threshold, while a lower value can make the threshold more lenient. The minimum and maximum sizes of buildings considered are 35 and 5000, respectively. You can change the minimum value according to the size of the buildings in your area. A contour squareness value less than 0.3 is used to filter out vegetation or noise which has low squareness compared to buildings. If you want the code to only take square buildings into account, use a higher squareness parameter. Morphological operations are used to remove noise and fill gaps in the binary mask with a (3, 3) kernel for opening. A smaller kernel can remove less noise, while a larger kernel can remove more noise but may also eliminate some valid structures (especially if you are using more than a 3x3 file in our sample point clouds). These values can be adjusted to modify the algorithm's strictness.
 
