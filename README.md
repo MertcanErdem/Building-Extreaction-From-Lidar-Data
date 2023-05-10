@@ -90,7 +90,7 @@ Note that this notebook assumes you have basic familiarity with Python and the J
 
 ![image](https://user-images.githubusercontent.com/92017528/228278327-796ce627-6158-46ec-ba42-ce86f6adadcc.png)
 
-    ![3](https://user-images.githubusercontent.com/92017528/228275978-d331043f-2311-4e65-9aa1-e2bb870c5d1f.png)
+![image](https://user-images.githubusercontent.com/92017528/228275978-d331043f-2311-4e65-9aa1-e2bb870c5d1f.png)
 
 ![image](https://user-images.githubusercontent.com/92017528/228278968-d982a95d-ce18-4d52-8c55-b8df193b017e.png)
 
