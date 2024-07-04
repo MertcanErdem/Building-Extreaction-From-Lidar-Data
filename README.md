@@ -1,3 +1,5 @@
+# This Project is not maintained and was a prototpye for LasBuildSeg library which can be found on [here](https://github.com/MertcanErdem/LasBuildSeg/tree/main)
+
 # Building Extreaction From Lidar Data
 
 This repository contains Python scripts to generate a building map from LiDAR data using the Normalized Digital Surface Model (nDHM) approach. The process involves generating Digital Surface Model (DSM) and Digital Terrain Model (DTM) from LiDAR data, computing the nDHM, and then applying different image processing algorithms to detect buildings from the nDHM.
